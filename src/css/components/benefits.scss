@@ -1,0 +1,103 @@
+.benefits{
+    margin-top: rem(47px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @include phones{
+        flex-direction: column;
+    }
+}
+.benefits__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3%;
+    position: relative;
+    &::before{
+        content: url(../img/decor.png);
+        top: 14%;
+        left: 85%;
+        position: absolute;
+        width: rem(67px);
+    }
+    &:last-child::before{
+        display: none;
+    }
+    @include tablets{
+        &::before{
+            display: none;
+        }
+        padding-right: 8%;
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+    @include phones{
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: rem(31px);
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+.benefit__img--wrapper{
+    width: rem(128px);
+    height: rem(128px);
+    border-radius: 50%;
+    background-color: #F2F5F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.benefit__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem(20px);
+    @include phones{
+        align-items: flex-start;
+        margin-left: rem(12px);
+        margin-top: rem(10px);
+    }
+}
+.benefit__title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(27px);
+    line-height: 1.18em;
+    color: $black;
+}
+.benefit__subtitle{
+    margin-top: rem(20px);
+    font-style: normal;
+    font-weight: 300;
+    font-size: $baseFontSize;
+    line-height: 1.2em;
+    color: $gray;
+    text-align: center;
+    margin-bottom: rem(144px);
+    @include tablets{
+        margin-bottom: rem(288px);
+    }
+    @include phones{
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+.pF__icon{
+    width: 43.83px;
+    height: 68px;
+}
+.strong__icon{
+    width: 64px;
+    height: 64px;
+}
+.unique__icon{
+    width: 68px;
+    height: 68px;
+}

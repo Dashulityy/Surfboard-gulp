@@ -1,0 +1,230 @@
+.form-section{
+    background: url(../img/bg/surfer.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include tablets{
+        padding-top: rem(175px);
+        padding-bottom: rem(185px);
+        background-position: 61%;
+    }
+    @include phones{
+        background-position: 49%;
+        padding-top: rem(87px);
+        padding-bottom: rem(81px);
+    }
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__container{
+    max-width: $containerWidth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-section__title{
+    padding: rem(62px) rem(233px) rem(0px);
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(48px);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    @include tablets{
+        padding: 0;
+        text-align: center;
+    }
+}
+.form{
+    padding: rem(59px) rem(82px) rem(85px);
+    display: flex;
+    @include tablets{
+        padding: rem(30px) 27%;
+        flex-direction: column;
+    }
+    @include phones{
+        padding: rem(63px) rem(11px) 0;
+    }
+}
+.form__column{
+   flex: 1;
+   margin-right: rem(27px);
+
+   &:last-child{
+    margin-right: 0;
+   }
+   @include tablets{
+    margin-right: 0;
+    margin-bottom: rem(14px);
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+   }
+}
+.form__row{
+    display: flex;
+    margin-bottom: rem(12px);
+    &:last-child{
+        margin-bottom: rem(0px);
+    }
+}
+.form__block{
+    flex: 1;
+    margin-right: rem(17px);
+    &:last-child{
+        margin-right: 0;
+    }
+    @include tablets{
+        margin-right: rem(23px);
+    }
+}
+.form__input{
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: rem(4px);
+    padding: rem(17px);
+    border: none;
+    @include tablets{
+        width: 100%;
+        padding: rem(9px) rem(45px);
+    }
+}
+.form__input:focus{
+    outline: rem(3px) solid #FEDB3F;
+}
+.form__input--short{
+    margin-right: rem(13.5px);
+    &:last-child{
+        margin-right: 0;
+    }
+    @include tablets{
+        padding: rem(8px);
+    }
+}
+.form__row--textarea{
+    display: flex;
+    flex-direction: column;
+}
+.form__input--textarea{
+    height: rem(152px);
+    resize: none;
+    @include tablets{
+        height: rem(82px);
+    }
+}
+.controls__radio{
+    display: none;
+    &:checked ~ .radio__visible{
+        &::before{
+            display: block;
+        }
+    }
+}
+.controls__checkbox{
+    display: none;
+    &:checked ~ .checkbox__visible{
+        &::before{
+            display: block;
+        }
+    }
+}
+.form__controls{
+    display: flex;
+    margin-bottom: rem(20px);
+    margin-top: rem(40px);
+    &:last-child{
+        margin-bottom: 0;
+    }
+    @include tablets{
+        margin-top: rem(24px);
+    }
+    @include phones{
+        justify-content: center;
+    }
+}
+.controls__elem{
+    display: flex;
+    margin-right: rem(9px);
+    &:last-child{
+        margin-right: 0;
+    }
+    cursor: pointer;
+    user-select: none;
+}
+.radio__visible{
+    margin-right: rem(10px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    &::before{
+        display: none;
+        content: "";
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        background-color: #FEDB3F;
+    }
+    @include tablets{
+        width: 24px;
+        height: 22px;
+        &::before{
+            width: 11px;
+            height: 11px;
+        }
+    }
+}
+.checkbox__visible{
+    margin-right: rem(10px);
+    width: rem(24px);
+    height: rem(24px);
+    border-radius: rem(4px);
+    background-color: #fff;
+    position: relative;
+    &::before{
+        display: none;
+        content: '\2713';
+        color: #FEDB3F;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+}
+.form__buttons{
+    margin-top: rem(46px);
+    @include tablets{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.form__button--transparent{
+    font-style: normal;
+    font-weight: 400;
+    font-size: $baseFontSize;
+    line-height: 1.2em;
+
+    color: #FFFFFF;
+    background: transparent;
+    text-transform: none;
+    margin-left: rem(22px);
+    &:hover{
+        color: #FEDB3F;
+    }
+}
+.form__title{
+    font-size: $baseFontSize;
+    @include tablets{
+        font-size: 14px;
+    }
+    @include phones{
+        font-size: $baseFontSize;
+    }
+}
